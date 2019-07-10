@@ -6,7 +6,7 @@
   </div>
   <div class="row mb-5">
     <div class="col-md-12">      
-      <table class="table table-striped">
+      <table class="table table-striped table-hover">
         <thead class="thead-dark">
           <tr>
             <th scope="col">Variable</th>
@@ -25,8 +25,60 @@
           <td>Lowercase</td>
           <td>{{ nombre | lowercase }}</td>
         </tr>
+        <tr>
+          <td>{{ nombre }}</td>
+          <td>slice:3</td>
+          <td>{{ nombre | slice:3 }}</td>
+        </tr>
+        <tr>
+          <td>{{ nombre }}</td>
+          <td>slice:0:3</td>
+          <td>{{ nombre | slice:0:3 }}</td>
+        </tr>
+        <tr>
+          <td>{{ tabla }}</td>
+          <td>slice:0:3</td>
+          <td>{{ tabla | slice:4:8 }}</td>
+        </tr>
+        <tr>
+          <td>{{ PI }}</td>
+          <td>number:'1.0-2'</td>
+          <td>{{ PI | number:'1.0-2' }}</td>
+        </tr>
+        <tr>
+          <td>{{ PI }}</td>
+          <td>number:'2.0-5'</td>
+          <td>{{ PI | number:'2.0-5' }}</td>
+        </tr>
+        <tr>
+          <td>{{ porcentaje }}</td>
+          <td>percent</td>
+          <td>{{ porcentaje | percent }}</td>
+        </tr>
+        <tr>
+          <td>{{ porcentaje }}</td>
+          <td>percent:'2.2-3'</td>
+          <td>{{ porcentaje | percent:'2.2-4' }}</td>
+        </tr>
+        <tr>
+          <td>{{ hoy }}</td>
+          <td>date</td>
+          <td>{{ hoy | date }}</td>
+        </tr>
+        <tr>
+          <td>{{ hoy }}</td>
+          <td>date:short</td>
+          <td>{{ hoy | date:'short' }}</td>
+        </tr>
+        <tr>
+          <td>{{ hoy }}</td>
+          <td>date:'d-MMMM-yyy'</td>
+          <td>{{ hoy | date:'d/MMMM/yyy' }}</td>
+        </tr>
         </tbody>
       </table>
+      <h4>JSON</h4>
+      <pre>{{ pokemon | json }}</pre>
     </div>
   </div>
 </div>
